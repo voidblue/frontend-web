@@ -3,8 +3,8 @@ list = [];
 pointer = 0;
 while(notnull){
   var num = window.prompt('숫자를 받습니다. Cancel버튼을 누르면 모두 더합니다.')
-  if(xxx != null){
-    list[pointer] = parseInt(xxx);
+  if(num != null){
+    list[pointer] = parseInt(num);
     pointer++;
   }
   else{
