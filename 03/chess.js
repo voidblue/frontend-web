@@ -1,20 +1,20 @@
 var board = document.querySelectorAll("#board span");
-board[0].owncolor = 'black'
-board[1].owncolor = 'white'
-board[2].owncolor = 'black'
-board[3].owncolor = 'white'
-board[4].owncolor = 'white'
-board[5].owncolor = 'black'
-board[6].owncolor = 'white'
-board[7].owncolor = 'black'
-board[8].owncolor = 'black'
-board[9].owncolor = 'white'
-board[10].owncolor = 'black'
-board[11].owncolor = 'white'
-board[12].owncolor = 'white'
-board[13].owncolor = 'black'
-board[14].owncolor = 'white'
-board[15].owncolor = 'black'
+var k = 0;
+var colors = [];
+colors[0] = 'black';
+colors[1] = 'white';
+for(var i = 0 ; i < 4 ; i++){
+  var colorpos = 0;
+  if (i%2 == 0){
+    colorpos = 1;
+  }
+  for(var j = 0; j < 4 ; j++){
+    board[k].owncolor = colors[colorpos];
+    k++;
+    if (colorpos == 1) colorpos--;
+    else colorpos++;
+  }
+}
 
 for (var i = 0 ; i < board.length ; i++){
   board[i].style.backgroundColor = board[i].owncolor;
