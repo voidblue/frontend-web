@@ -1,20 +1,20 @@
 //start...
-var todo = document.getElementById('todo')
-
-
-todolists = ['JS공부하기', 'sss']
-
-var li = document.getElementById('todolist')
-
+var todo = document.getElementById('todo');
+var todolists = [];
+var text;
+var li = document.getElementById('todolist');
+var dels;
 
 function renew(){
       var str = '';
       for (var i = 0 ; i < todolists.length ; i++){
-            str += '<ul><li><button class="delete">×</button>'+
+            str = '<ul><li><button class="delete" name="'+i+'">×</button>'+
             '<input type="checkbox" class="toggle-checked">'+
-            '<span class="text">' + todolists[i] + '</span></li><ul>'
+            '<span class="text">' + text + '</span></li><ul>'
             }
-      li.innerHTML = str
+            todolists[todolists.length] = str;
+      dels = $('.delete');
+      li.innerHTML = todolists.toString()
     }
 
 renew();
@@ -22,12 +22,23 @@ renew();
 
 todo.addEventListener('keypress', entered)
 function entered(event){
-
   var keyCode = event.keyCode;
   if(keyCode == 13){
-      if(event.target.value !== '')
-      todolists[todolists.length] = event.target.value
-      event.target.value = ''
+      if(event.target.value !== ''){
+          text = event.target.value;
+          event.target.value = ''
+      }
       renew();
+
+      for(var i = 0 ; i < dels.length ; i++){
+        console.log(dels[i]);
+        dels[i].on('click', btn_del);
+      }
   }
+}
+
+function btn_del(event){
+  i = event.target.name;
+  console.log(i);
+  todolists.remove(todolists[i]);
 }
