@@ -1,0 +1,42 @@
+body,h1 {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background: #eee;
+    height: 30px;
+    padding: 10px;
+}
+h1 {
+    float: left;
+}
+.menu {
+    float:right;
+    margin: 0 0 0 0;
+    padding: 10px;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+#memo {
+    width: 100%;
+    height: 200px;
+}
+
+.appinform{
+  text-align : center;
+  position : fixed;
+  left: 50%;
+  top: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hidden{
+  display: none;
+}
