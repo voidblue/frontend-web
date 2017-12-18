@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>My Note</title>
+  <!-- 로컬용 태그 <link rel="stylesheet" href="css/app.css"> -->
+  <!-- 배포용 태그 --><link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="header">
+  <h1>My Note</h1>
+  <div class="menu">
+    <button class="btn-newnote">새노트</button>
+    <button class="btn-savenote">노트저장</button>
+    <button class="btn-about">about</button>
+    <button class="btn-fullscrean">전체화면</button>
+  </div>
+</div>
+
+<div class="container">
+<textarea id="memo" placeholder="내용을 입력하세요"></textarea>
+</div>
+
+<script type="text/template" id="noteTemplate"><%=notes.content%></script>
+
+<div class="appinform hidden">
+  <h2>나만의 Note만들기</h2>
+  <h4>작성자 : 김재윤</h4>
+  <h4>날짜 : 2017.12.21</h4>
+</div>
+
+<!-- 배포용 태그 -->
+<script src="lib/jquery-1.11.2.js"></script>
+<script src="Init.js"></script>
+<script src="SaveData.js"></script>
+<script src="LoadData.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
