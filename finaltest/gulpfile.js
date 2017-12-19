@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+﻿var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var watch = require('gulp-watch');
@@ -6,7 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var connect = require('gulp-connect');
 
 //js 프로젝트 소스파일
-var jsfiles = ['src/js/*.js', 'src/js/pages/**/*.js', 'src/js/main.js'];
+var jsfiles = ['src/js/*.js'];
 
 gulp.task('concat:js', function() {
   return gulp.src(jsfiles)
